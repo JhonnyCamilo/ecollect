@@ -1,0 +1,61 @@
+<form [formGroup]="form" (ngSubmit)= "guardarEditoriales()">
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-user-circle" [class.green-icon]="this.form.get('Nombre').valid"
+                        [class.red-icon]="this.form.get('Nombre').invalid && this.form.get('Nombre').touched"></i>
+                </div>
+            </div>
+            <input type="text" class="form-control" formControlName="Nombre" placeholder="Titular">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-road" [class.green-icon]="this.form.get('Direccion').valid"
+                        [class.red-icon]="this.form.get('Direccion').invalid && this.form.get('Direccion').touched"></i>
+                </div>
+            </div>
+            <input type="text" class="form-control" formControlName="Direccion" placeholder="Direccion">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-phone" [class.green-icon]="this.form.get('Telefono').valid"
+                        [class.red-icon]="this.form.get('Telefono').invalid && this.form.get('Telefono').touched"></i>
+                </div>
+            </div>
+            <input type="text" class="form-control" formControlName="Telefono" placeholder="Telefono">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-at" [class.green-icon]="this.form.get('Correo').valid"
+                        [class.red-icon]="this.form.get('Correo').invalid && this.form.get('Correo').touched"></i>
+                </div>
+            </div>
+            <input type="text" class="form-control" formControlName="Correo" placeholder="Correo">
+        </div>
+       
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-clipboard" [class.green-icon]="this.form.get('MaxRegistros').valid"
+                        [class.red-icon]="this.form.get('MaxRegistros').invalid && this.form.get('MaxRegistros').touched"></i>
+                </div>
+            </div>
+            <input type="text" class="form-control" formControlName="MaxRegistros" placeholder="Numero de Tarjeta">
+        </div>
+    </div>
+    <div class="form-grup">
+        <button class="btn btn-primary btn-lg btn-block" [disabled]="form.invalid" type="submit"><i class="fas fa-database"></i> Guardar en las Base de Datos</button>
+    </div>
+</form>

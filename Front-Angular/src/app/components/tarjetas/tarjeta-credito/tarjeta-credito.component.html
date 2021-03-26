@@ -1,0 +1,80 @@
+<form [formGroup]="form" (ngSubmit)= "guardarTarjeta()">
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-heading" [class.green-icon]="this.form.get('Titulo').valid"
+                        [class.red-icon]="this.form.get('Titulo').invalid && this.form.get('Titulo').touched"></i>
+                </div>
+            </div>
+            <input type="text" class="form-control" formControlName="Titulo" maxlength="35" placeholder="Titulo">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="far fa-file-alt" [class.green-icon]="this.form.get('NumeroPaginas').valid"
+                    [class.red-icon]="this.form.get('NumeroPaginas').invalid && this.form.get('NumeroPaginas').touched"></i>
+                </div>
+            </div>
+            <input type="text" class="form-control" formControlName="NumeroPaginas" maxlength="16" placeholder="NumeroPaginas">
+        </div>
+    </div>
+    
+        <div class="form-group">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text bg-white">
+                            <i class="far fa-user" [class.green-icon]="this.form.get('Autor').valid"
+                            [class.red-icon]="this.form.get('Autor').invalid && this.form.get('Autor').touched"></i>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" formControlName="Autor" maxlength="35" placeholder="Autor">
+                </div>
+            </div>
+        
+        <div class="form-group">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text bg-white">
+                            <i class="fas fa-calendar-week" [class.green-icon]="this.form.get('Year').valid"
+                            [class.red-icon]="this.form.get('Year').invalid && this.form.get('Year').touched"></i>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" formControlName="Year" placeholder="Year" maxlength="4">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text bg-white">
+                            <i class="fas fa-layer-group" [class.green-icon]="this.form.get('Editorial').valid"
+                            [class.red-icon]="this.form.get('Editorial').invalid && this.form.get('Editorial').touched"></i>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" formControlName="Editorial" placeholder="Editorial" maxlength="35">
+                </div>
+            </div>
+        </div><div class="form-group">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text bg-white">
+                            <i class="fas fa-genderless" [class.green-icon]="this.form.get('Genero').valid"
+                            [class.red-icon]="this.form.get('Genero').invalid && this.form.get('Genero').touched"></i>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" formControlName="Genero" placeholder="Genero" maxlength="35">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-grup">
+        <button class="btn btn-success btn-lg btn-block" [disabled]="form.invalid" type="submit"><i class="fas fa-database"></i> Aceptar</button>
+    </div>
+</form>

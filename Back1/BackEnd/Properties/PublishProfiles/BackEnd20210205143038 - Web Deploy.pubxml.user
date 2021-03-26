@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIY1IzgfUmUmgsRQ+ah9RGgAAAAACAAAAAAAQZgAAAAEAACAAAAAMFOr+Bss4KsWhDRtfTH9xkyXxEqlLTzywZkHhf/s+ZAAAAAAOgAAAAAIAACAAAADUrrYWT6LPoApui1WkHkA7VflUWgX9IdEt6aYBIhK97IAAAAAuJBdJDTnqYgDhRxjcpcDzEyvk1pumvUiArXLe4i651v3BML26+aQZ9qlKKkYGjaK2mmxaUAEPx/8dNLruMVis4HEBIMUY2gtM7YcG4Y8xFFIQCWRIVcTsWNqIHEiKp9ha35UVr2jLiqKaEmCAzK7dAxVvFWaI9JjvZpnxlldVy0AAAADstKDboQqqt7BeR2Pmc5YCP5NJaBf7ZrA0L5Ql15eggb1Tg++heHEmmYbSypZQOB0Piy8oVAl2PHrxcHnP5Jfh</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DevConnection">
+      <Value>Data Source=tcp:backenddbservernexo.database.windows.net,1433%3bInitial Catalog=BackEnd3_db%3bUser Id=jhonny%40backenddbservernexo%3bPassword=esperanza%402021</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="BackEnd.AplicationDbContext">
+      <Value>Data Source=tcp:backenddbservernexo.database.windows.net,1433%3bInitial Catalog=BackEnd3_db%3bUser Id=jhonny%40backenddbservernexo%3bPassword=esperanza%402021</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
